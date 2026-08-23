@@ -67,17 +67,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     if (email === 'demo@womensafety.com' && password === 'demo123') {
       const demoUser: User = {
         id: '1',
-        name: 'Demo User',
+        name: '',
         email: 'demo@womensafety.com',
-        phone: '+15550001111',
-        emergencyContacts: [
-          {
-            id: 'default-gkz',
-            name: 'gkz',
-            phone: '7012673042',
-            relationship: 'Guardian'
-          }
-        ]
+        phone: '',
+        emergencyContacts: []
       };
       setUser(demoUser);
       localStorage.setItem('user', JSON.stringify(demoUser));

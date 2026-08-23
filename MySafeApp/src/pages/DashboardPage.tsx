@@ -231,14 +231,14 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
         <div className="lg:col-span-8 space-y-6">
           
           {/* Three Metric Cards Row */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="p-4.5 bg-white rounded-3xl border border-amber-200 shadow-sm space-y-1.5">
               <div className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm">
                 🧭
               </div>
               <div>
                 <span className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider block">Journeys</span>
-                <span className="text-xl md:text-2xl font-black text-black block mt-0.5">124</span>
+                <span className="text-xl md:text-2xl font-black text-black block mt-0.5">0</span>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
               <div>
                 <span className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider block">Contacts</span>
                 <span className="text-xl md:text-2xl font-black text-black block mt-0.5">
-                  {user?.emergencyContacts?.length || 8}
+                  {user?.emergencyContacts?.length || 0}
                 </span>
               </div>
             </div>
@@ -260,7 +260,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
               </div>
               <div>
                 <span className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider block">Safety Score</span>
-                <span className="text-xl md:text-2xl font-black text-amber-650 block mt-0.5">98%</span>
+                <span className="text-lg md:text-xl font-black text-amber-650 block mt-0.5">No data yet</span>
               </div>
             </div>
           </div>
@@ -296,31 +296,6 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
               darkMode={false}
               className="h-full w-full"
             />
-
-            <div className="absolute top-4 left-4 z-[400] px-3.5 py-2 rounded-full bg-white/95 border border-amber-200 shadow-md backdrop-blur-md flex items-center space-x-2 text-[10px] font-black text-black uppercase tracking-wide">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
-              <span>Current Location: Soho District</span>
-            </div>
-
-            <div className="absolute bottom-4 right-4 z-[400] bg-white/95 border border-amber-200 p-4 rounded-2xl shadow-lg backdrop-blur-md max-w-[220px] text-left space-y-3">
-              <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest border-b border-amber-100 pb-1">Safe Havens Nearby</p>
-              <div className="space-y-2">
-                <div className="flex items-start space-x-2 text-[10px] font-bold">
-                  <span className="text-amber-500">🛡</span>
-                  <div>
-                    <h5 className="text-black font-extrabold">Central Station</h5>
-                    <p className="text-[8px] text-slate-500 mt-0.5 uppercase tracking-wide">0.2 Miles • Active</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-2 text-[10px] font-bold">
-                  <span className="text-amber-500">🏥</span>
-                  <div>
-                    <h5 className="text-black font-extrabold">City Health Hub</h5>
-                    <p className="text-[8px] text-slate-500 mt-0.5 uppercase tracking-wide">0.5 Miles • Active</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
